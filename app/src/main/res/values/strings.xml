@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Boston - Paris</string>
+
+    <string name="flight">Virgin Atlantic Flight 19</string>
+    <string name="operation">Operated by Delta</string>
+    <string name="bos">bos</string>
+    <string name="cdg">cdg</string>
+    <string name="btn1">on time</string>
+    <string name="time">Left early 1h30mins ago</string>
+
+    <string name="detail1">Boston - Mon 21 Mar</string>
+    <string name="departed">Departed</string>
+    <string name="terminal">Terminal</string>
+    <string name="gate">Gate</string>
+    <string name="departedValue">5:58PM</string>
+    <string name="terminalValue">2</string>
+    <string name="gateValue">10A</string>
+    <string name="scheduleDeparture">Scheduled departure 6:00PM</string>
+
+
+    <string name="detail2">Charles de Gaulle - Tues, 1st March</string>
+    <string name="expected">Expected</string>
+    <string name="expectedValue">6:10AM</string>
+    <string name="terminalValue2">3</string>
+    <string name="gateValue2">23B</string>
+
+    <string name="duration">Flight Duration</string>
+    <string name="timeD">6h 55m</string>
+    <string name="passenger">Passenger</string>
+    <string name="name">Name Surname</string>
+
+    <string name="conf">Confirmation</string>
+    <string name="confVal">711543897125697</string>
+    <string name="seat">Seat Number</string>
+    <string name="seatVal">350B</string>
+
+    <string name="email">View email from Virgin Atlantic</string>
+    <string name="contact">View Boarding Pass</string>
+
+
+</resources>
