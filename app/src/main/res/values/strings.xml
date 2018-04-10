@@ -38,4 +38,26 @@
     <string name="contact">View Boarding Pass</string>
 
 
+    <string name="checkin">Check in</string>
+    <string name="checkout">Check Out</string>
+    <string name="date1">Sun July 19</string>
+    <string name="date2">Sat, July 25</string>
+
+    <string name="stayDur">Duration of Stay </string>
+    <string name="room">Room type</string>
+    <string name="stayVal">6 nights</string>
+    <string name="roomVal">Deluxe Twin Room</string>
+
+    <string name="name2"> Name </string>
+    <string name="name2Val">German Kopytkov</string>
+    <string name="conf2">Confirmation Number</string>
+    <string name="conf2Value">E123456789_987</string>
+
+    <string name="phone">Phone Number</string>
+    <string name="number">+31 1 48 00 00 11 </string>
+    <string name="address">Address</string>
+    <string name="addressValue">23 Reu des Messageries 75010, Paris, France</string>
+    <string name="emailView">View email from booking.com</string>
+
+
 </resources>

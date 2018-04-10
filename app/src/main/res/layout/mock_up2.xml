@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -13,32 +12,174 @@
         <ImageView
             android:id="@+id/imv"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:padding="4dp"
+            android:background="@color/colorWhite"
             android:layout_margin="4dp"/>
 
-        <LinearLayout
-            android:id="@+id/ll1"
-            android:layout_toRightOf="@+id/imv"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/rlCheck"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="4dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/imv">
 
             <TextView
-                android:id="@+id/tv1"
+                android:id="@+id/tvCheckin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:textStyle="bold"/>
-
+                android:text="@string/checkin"
+                android:padding="4dp"
+                android:textAppearance="?android:textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tvDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date1"
+                android:padding="4dp"
+                android:layout_below="@+id/tvCheckin"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
-                android:id="@+id/tv2"
+                android:id="@+id/tvCheckOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"/>
-        </LinearLayout>
+                android:layout_toRightOf="@+id/tvCheckin"
+                android:layout_toEndOf="@+id/tvCheckin"
+                android:layout_marginStart="120dp"
+                android:layout_marginLeft="120dp"
+                android:padding="4dp"
+                android:text="@string/checkout"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvDate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCheckOut"
+                android:layout_alignStart="@+id/tvCheckOut"
+                android:layout_alignLeft="@+id/tvCheckOut"
+                android:text="@string/date2"
+                android:padding="4dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stayDur"
+                android:padding="4dp"
+                android:layout_below="@+id/tvDate1"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvDurVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stayVal"
+                android:layout_below="@+id/tvDuration"
+                android:padding="4dp"
+                android:textStyle="bold"
+
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/room"
+                android:padding="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tvDate2"
+                android:layout_alignStart="@+id/tvCheckOut"
+                android:layout_alignLeft="@+id/tvCheckOut"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvRoomVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/roomVal"
+                android:layout_below="@+id/tvRoom"
+                android:layout_alignStart="@+id/tvCheckOut"
+                android:layout_alignLeft="@+id/tvCheckOut"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name2"
+                android:padding="4dp"
+                android:layout_below="@+id/tvRoomVal"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvConf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conf2"
+                android:padding="4dp"
+                android:layout_below="@+id/tvRoomVal"
+                android:layout_alignStart="@+id/tvCheckOut"
+                android:layout_alignLeft="@+id/tvCheckOut"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name2Val"
+                android:layout_below="@+id/tvName"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvConfVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conf2Value"
+                android:padding="4dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvConf"
+                android:layout_alignStart="@+id/tvCheckOut"
+                android:layout_alignLeft="@+id/tvCheckOut"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCheck">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/llContact">
+
+
+            </LinearLayout>
+
+
+
+
+
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
 
