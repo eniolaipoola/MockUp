@@ -184,12 +184,17 @@
                     android:layout_width="wrap_content"
                     android:src="@drawable/ic_call_black_24dp" />
 
+
                 <TextView
                     android:id="@+id/tvPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/phone"
                     android:padding="4dp"
+                    android:layout_toRightOf="@+id/imCall"
+                    android:layout_toEndOf="@+id/imCall"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"
                     android:textAppearance="?android:textAppearanceSmall" />
 
                 <TextView
@@ -199,8 +204,18 @@
                     android:text="@string/number"
                     android:padding="4dp"
                     android:layout_below="@+id/tvPhone"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:textStyle="bold"
                     android:textAppearance="?android:textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/imAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_person_pin_circle_black_24dp"
+                    android:layout_below="@+id/tvPhoneVal"
+                    android:layout_marginTop="16dp"/>
 
                 <TextView
                     android:id="@+id/tvAddress"
@@ -210,6 +225,10 @@
                     android:layout_marginTop="16dp"
                     android:padding="4dp"
                     android:layout_below="@+id/tvPhoneVal"
+                    android:layout_toRightOf="@+id/imCall"
+                    android:layout_toEndOf="@+id/imCall"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"
                     android:textAppearance="?android:textAppearanceSmall" />
 
                 <TextView
@@ -219,8 +238,19 @@
                     android:text="@string/addressValue"
                     android:padding="4dp"
                     android:layout_below="@+id/tvAddress"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:textStyle="bold"
                     android:textAppearance="?android:textAppearanceSmall" />
+
+
+                <ImageView
+                    android:id="@+id/imEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_email_black_24dp"
+                    android:layout_below="@+id/tvAddressVal"
+                    android:layout_marginTop="16dp"/>
 
                 <TextView
                     android:id="@+id/tvEmail"
@@ -230,12 +260,12 @@
                     android:padding="4dp"
                     android:layout_marginTop="16dp"
                     android:layout_below="@+id/tvAddressVal"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
                     android:textStyle="bold"
                     android:textAppearance="?android:textAppearanceSmall" />
-
             </RelativeLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
     </ScrollView>
-
 </android.support.constraint.ConstraintLayout>
