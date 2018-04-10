@@ -22,11 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-        <LinearLayout
-            android:id="@+id/ll1"
+        <RelativeLayout
+            android:id="@+id/rl1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
 
             <TextView
                 android:id="@+id/tvPlace"
@@ -42,58 +43,80 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/operation"
+                android:layout_below="@+id/tvPlace"
                 android:padding="4dp"
                 android:textSize="16sp" />
 
-            <LinearLayout
-                android:id="@+id/ll1a"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvBos"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:orientation="horizontal">
+                android:layout_below="@+id/tvOperation"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="22dp"
+                android:text="@string/bos"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                app:fontFamily="sans-serif-condensed"
+                android:textSize="32sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/bos"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"
-                    app:fontFamily="sans-serif-condensed"
-                    android:textSize="32sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/cdg"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    app:fontFamily="sans-serif-condensed"
-                    android:textAllCaps="true"
-                    android:textSize="32sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll1b"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/imFlight"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="4dp">
+                android:src="@drawable/ic_airplanemode_active_black_24dp"
+                android:layout_toRightOf="@+id/tvBos"
+                android:layout_toEndOf="@+id/tvBos"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tvOperation"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn1"
-                    android:background="@color/colorGreen"/>
+            <ImageView
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="190dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="24dp"
+                android:layout_toRightOf="@+id/imFlight"
+                android:visibility="visible"
+                android:layout_toEndOf="@+id/imFlight"
+                android:layout_below="@+id/tvOperation"/>
 
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@string/time"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"/>
-            </LinearLayout>
-        </LinearLayout>
+            <TextView
+                android:id="@+id/tvCdg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cdg"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:fontFamily="sans-serif-condensed"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvOperation"
+                android:textAllCaps="true"
+                android:textSize="32sp" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/btn1"
+                android:layout_below="@+id/tvBos"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/time"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toEndOf="@+id/btn1"
+                android:layout_toRightOf="@+id/btn1"
+                android:layout_below="@+id/tvBos"
+                android:layout_marginStart="8dp"/>
+
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <LinearLayout
