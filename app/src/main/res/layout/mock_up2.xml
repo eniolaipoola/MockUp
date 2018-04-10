@@ -4,10 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/imv"
@@ -166,22 +171,71 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rlCheck">
 
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="vertical"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:id="@+id/llContact">
+                android:layout_margin="8dp"
+                android:id="@+id/rlContact">
 
+                <ImageView
+                    android:id="@+id/imCall"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_call_black_24dp" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    android:padding="4dp"
+                    android:textAppearance="?android:textAppearanceSmall" />
 
+                <TextView
+                    android:id="@+id/tvPhoneVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number"
+                    android:padding="4dp"
+                    android:layout_below="@+id/tvPhone"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceMedium" />
 
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:layout_marginTop="16dp"
+                    android:padding="4dp"
+                    android:layout_below="@+id/tvPhoneVal"
+                    android:textAppearance="?android:textAppearanceSmall" />
 
+                <TextView
+                    android:id="@+id/tvAddressVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addressValue"
+                    android:padding="4dp"
+                    android:layout_below="@+id/tvAddress"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceSmall" />
 
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emailView"
+                    android:padding="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@+id/tvAddressVal"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceSmall" />
 
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
-
-
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
