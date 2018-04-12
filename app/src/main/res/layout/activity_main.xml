@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:scrollbars="none">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -115,87 +115,83 @@
                 android:layout_toRightOf="@+id/btn1"
                 android:layout_below="@+id/tvBos"
                 android:layout_marginStart="8dp"/>
-
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail1"
+        android:textSize="16sp"
+        app:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="16dp"/>
+
     <LinearLayout
-        android:id="@+id/ll2"
+        android:id="@+id/ll1a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="4dp"
-        android:layout_marginTop="12dp">
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/departed"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="@string/terminal"
+            android:layout_weight="1"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="@string/gate"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2b"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/detail1"
-            android:textSize="16sp"
-            app:fontFamily="sans-serif-smallcaps"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
-            />
-
-        <LinearLayout
-            android:id="@+id/ll2a"
-            android:orientation="horizontal"
+            android:text="@string/departedValue"
+            android:textSize="24sp"
+            android:textColor="@color/colorGreen"
+            android:layout_weight="1"/>
+        <TextView
             android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/departed"
-                android:textSize="16sp"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/terminal"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/gate"
-                android:layout_weight="1"
-                android:gravity="center"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll2b"
-            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:text="@string/terminalValue"
+            android:textSize="24sp"
+            android:layout_weight="1"/>
+        <TextView
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginTop="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/departedValue"
-                android:textSize="24sp"
-                android:textColor="@color/colorGreen"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/terminalValue"
-                android:textSize="24sp"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/gateValue"
-                android:layout_weight="1"
-                android:textSize="24sp"
-                android:gravity="center"/>
-        </LinearLayout>
+            android:layout_width="wrap_content"
+            android:text="@string/gateValue"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:gravity="center"/>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/ll3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="4dp"
         android:layout_marginTop="12dp">
 
         <TextView
@@ -205,8 +201,8 @@
             android:textSize="16sp"
             app:fontFamily="sans-serif-smallcaps"
             android:textStyle="bold"
-            android:textColor="@color/colorBlack"
-            />
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorBlack" />
 
         <LinearLayout
             android:id="@+id/ll3a"
@@ -275,6 +271,7 @@
         android:background="@color/colorWhite"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp">
 
         <LinearLayout
@@ -367,21 +364,68 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/email"
-                android:textAppearance="?android:textAppearanceSmall"
-                android:textSize="14sp" />
+                android:layout_width="match_parent"
+                android:id="@+id/rl2"
+                android:layout_marginTop="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/contact"
-                android:textAppearance="?android:textAppearanceSmall"
-                android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/imEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_email_black_24dp"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:padding="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/imEmail"
+                    android:layout_toEndOf="@+id/imEmail"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <ImageView
+                    android:id="@+id/ivBooking"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_border_horizontal_black_24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@+id/imEmail"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@+id/tvEmail"
+                    android:layout_toRightOf="@+id/ivBooking"
+                    android:layout_toEndOf="@+id/ivBooking"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/contact"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="Next"
+                    android:layout_margin="4dp"
+                    android:layout_below="@+id/ivBooking"
+                    android:layout_marginBottom="8dp"/>
+
+            </RelativeLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
