@@ -13,14 +13,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="4dp"
-    android:layout_margin="8dp"
+    android:layout_margin="4dp"
     tools:context=".MainActivity">
 
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv1"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp">
 
         <RelativeLayout
             android:id="@+id/rl1"
@@ -187,22 +188,22 @@
             android:gravity="center"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detail2"
+        android:textSize="16sp"
+        app:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorBlack" />
+
     <LinearLayout
         android:id="@+id/ll3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="12dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/detail2"
-            android:textSize="16sp"
-            app:fontFamily="sans-serif-smallcaps"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/colorBlack" />
 
         <LinearLayout
             android:id="@+id/ll3a"
@@ -264,11 +265,20 @@
         android:textAppearance="?android:textAppearanceSmall"
         android:text="@string/scheduleDeparture"
         android:textSize="14sp"
+        android:layout_marginTop="8dp"
         android:paddingTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Showing local times"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorBlack" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv2"
-        android:background="@color/colorWhite"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginBottom="8dp"
